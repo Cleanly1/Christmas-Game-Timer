@@ -4,6 +4,7 @@ let timeLeft = 0;
 let timer;
 let interval;
 const audio = new Audio("./assets/alarm.wav");
+audio.loop = true;
 let started = false;
 
 const showButton = document.querySelector("#showButton");
@@ -31,8 +32,10 @@ const getMillisecondsForMinutes = (minutes) => {
 const stopTime = () => {
 	clearInterval(interval);
 	clearTimeout(timer);
+	svg.classList.remove("timerIcon-active");
 	audio.pause();
 
+	timeDisplay.innerHTML = "--:--";
 	timeLeft = 0;
 };
 
@@ -51,8 +54,6 @@ const startTimer = () => {
 			getMillisecondsForMinutes(minValue)
 	);
 
-	timeDisplay.innerHTML = "--:--";
-
 	timeLeft = timeOut;
 
 	interval = setInterval(() => {
@@ -62,6 +63,7 @@ const startTimer = () => {
 
 	timer = setTimeout(() => {
 		audio.play();
+		timeDisplay.innerHTML = "Klart!";
 	}, timeOut);
 };
 

@@ -23,7 +23,7 @@ h1 {
 }
 
 .buttons {
-	margin: 8px 0;
+	margin: 0 4px;
 	background-color: rgb(222, 46, 46);
 	padding: 8px;
 	color: rgb(22, 202, 22);
@@ -31,6 +31,7 @@ h1 {
 	font-weight: 600;
 	border: 2px solid white;
 	border-radius: 4px;
+	box-shadow: 1px 1px 4px black;
 }
 
 .inputContainer {
@@ -39,6 +40,7 @@ h1 {
 }
 
 .inputContainer span {
+	display: flex;
 	margin: 0 8px;
 }
 
@@ -75,4 +77,7 @@ p {
 .inputs {
 	padding: 6px;
 	width: 64px;
+	border: 2px solid white;
+	background-color: rgb(222, 46, 46);
+	color: white;
 }
