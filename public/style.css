@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	align-items: center;
+	background-color: rgb(198, 32, 32);
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+}
+
+header {
+	display: flex;
+	margin: 16px 0;
+}
+
+h1 {
+	color: rgb(22, 202, 22);
+}
+
+.buttons {
+	display: flex;
+}
+
+.inputContainer {
+	display: flex;
+	margin: 16px;
+}
+
+.inputContainer span {
+	margin: 0 8px;
+}
+
+.timerContainer {
+	margin: 16px 0;
+}
