@@ -5,10 +5,11 @@
 
 body {
 	align-items: center;
-	background-color: rgb(198, 32, 32);
+	background-color: rgb(222, 46, 46);
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
+	color: white;
 }
 
 header {
@@ -21,7 +22,14 @@ h1 {
 }
 
 .buttons {
-	display: flex;
+	margin: 8px 0;
+	background-color: rgb(222, 46, 46);
+	padding: 8px;
+	color: rgb(22, 202, 22);
+	font-size: 16px;
+	font-weight: 600;
+	border: 2px solid white;
+	border-radius: 4px;
 }
 
 .inputContainer {
@@ -34,5 +42,36 @@ h1 {
 }
 
 .timerContainer {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	width: fit-content;
 	margin: 16px 0;
+}
+
+.timerIcon {
+	margin: 0 16px;
+	fill: white;
+	transition-duration: 0.5s;
+}
+
+.timerIcon-active {
+	fill: rgb(22, 202, 22);
+}
+
+.timerIcon svg {
+	height: 32px;
+}
+
+p {
+	font-size: 32px;
+}
+
+.labels {
+	color: rgb(22, 202, 22);
+	font-weight: 600;
+}
+.inputs {
+	padding: 6px;
+	width: 64px;
 }
