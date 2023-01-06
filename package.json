@@ -1,6 +1,6 @@
 {
 	"scripts": {
-		"build": "sass src/styling:public/styling",
+		"prod": "sass src/styling:public/styling",
 		"dev": "sass --watch src/styling:public/styling"
 	},
   "devDependencies": {
