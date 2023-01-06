@@ -2,17 +2,17 @@
 <html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" type="text/css" href="styling/index.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" href="/yourTabIcon" type="image/x-icon" />
+		<link rel="icon" href="./assets/icon.png" type="image/x-icon" />
 		<title>Christmas Game Timer</title>
 	</head>
 	<header>
 		<h1>Christmas Game Timer</h1>
 	</header>
-	<div class="timerContainer">
+	<div class="timer_container">
 		<p id="time">--:--</p>
-		<span class="timerIcon">
+		<span class="timer_icon">
 			<svg
 				version="1.1"
 				xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@
 			</svg>
 		</span>
 	</div>
-	<div class="inputContainer">
+	<div class="inputs_container">
 		<span>
 			<label class="labels" for="minMinutes">Min minutes:</label>
 			<input class="inputs" id="minMinutes" type="number" />
@@ -61,10 +61,10 @@
 			<input class="inputs" id="maxMinutes" type="number" />
 		</span>
 	</div>
-	<div class="buttonContainer">
-		<button class="buttons" id="startButton">Start</button>
-		<button class="buttons" id="stopButton">Stop</button>
-		<button class="buttons" id="showButton">Show Time Left</button>
+	<div class="button_container">
+		<button class="button" id="startButton">Start</button>
+		<button class="button" id="stopButton">Stop</button>
+		<button class="button" id="showButton">Show Time Left</button>
 	</div>
 	<body>
 		<script type="text/javascript" src="script.js"></script>

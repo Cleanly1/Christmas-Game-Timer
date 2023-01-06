@@ -18,7 +18,7 @@ const minInput = document.querySelector("#minMinutes");
 minInput.addEventListener("change", (event) => {
 	minInput.setAttribute("value", event.target.value);
 });
-const svg = document.querySelector(".timerIcon");
+const svg = document.querySelector(".timer_icon");
 
 maxInput.setAttribute("value", maxMinutes);
 minInput.setAttribute("value", minMinutes);
@@ -32,11 +32,12 @@ const getMillisecondsForMinutes = (minutes) => {
 const stopTime = () => {
 	clearInterval(interval);
 	clearTimeout(timer);
-	svg.classList.remove("timerIcon-active");
+	svg.classList.remove("timer_icon--active");
 	audio.pause();
 
 	timeDisplay.innerHTML = "--:--";
 	timeLeft = 0;
+	started = false;
 };
 
 const startTimer = () => {
@@ -58,13 +59,14 @@ const startTimer = () => {
 
 	interval = setInterval(() => {
 		timeLeft = timeLeft - 1000;
-		svg.classList.toggle("timerIcon-active");
+		svg.classList.toggle("timer_icon--active");
 	}, 1000);
 
 	timer = setTimeout(() => {
 		audio.play();
 		timeDisplay.innerHTML = "Klart!";
 	}, timeOut);
+	started = true;
 };
 
 const getTimeLeft = () => {
@@ -73,11 +75,7 @@ const getTimeLeft = () => {
 		Math.floor(timeLeft / 1000) - minutesLeft * 60
 	);
 	return `${minutesLeft < 10 ? `0${minutesLeft}` : minutesLeft}:${
-		secondsLeft == 0
-			? "00"
-			: secondsLeft < 10
-			? `0${secondsLeft}`
-			: secondsLeft
+		secondsLeft == 0 ? "00" : secondsLeft < 10 ? `0${secondsLeft}` : secondsLeft
 	}`;
 };
 
