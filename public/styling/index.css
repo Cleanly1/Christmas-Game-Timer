@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color: rgb(222, 46, 46);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  color: white;
+}
+
+header {
+  display: flex;
+  margin: 16px 0;
+}
+
+h1 {
+  color: rgb(22, 202, 22);
+  font-size: 24px;
+}
+
+.timer_container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: fit-content;
+  margin: 16px 0;
+}
+.timer_icon {
+  margin: 0 16px;
+  fill: white;
+  transition-duration: 0.5s;
+}
+.timer_icon svg {
+  height: 32px;
+}
+.timer_icon--active {
+  fill: rgb(22, 202, 22);
+}
+.timer_icon p {
+  font-size: 32px;
+}
+
+.labels {
+  color: rgb(22, 202, 22);
+  font-weight: 600;
+}
+
+.inputs {
+  padding: 6px;
+  width: 64px;
+  border: 2px solid white;
+  background-color: rgb(222, 46, 46);
+  color: white;
+  margin: 4px;
+}
+.inputs_container {
+  display: flex;
+  margin: 16px;
+}
+.inputs_container span {
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
+}
+
+.button {
+  margin: 0 4px;
+  background-color: rgb(222, 46, 46);
+  padding: 8px;
+  color: rgb(22, 202, 22);
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid white;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px black;
+}
+.button_container {
+  background-color: rgb(222, 46, 46);
+}
+
+/*# sourceMappingURL=index.css.map */

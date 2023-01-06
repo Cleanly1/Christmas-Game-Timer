@@ -1,7 +1,4 @@
 
-# Ignore production files
-/public/styling
-
 # Ignore npm packages
 /node_modules
 
