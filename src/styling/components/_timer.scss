@@ -1,0 +1,27 @@
+.timer {
+	&_container {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		width: fit-content;
+		margin: 16px 0;
+	}
+
+	&_icon {
+		margin: 0 16px;
+		fill: white;
+		transition-duration: 0.5s;
+
+		& svg {
+			height: 32px;
+		}
+
+		&--active {
+			fill: $primary-green;
+		}
+
+		& p {
+			font-size: 32px;
+		}
+	}
+}

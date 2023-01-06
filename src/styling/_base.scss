@@ -1,0 +1,23 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	align-items: center;
+	background-color: $primary-red;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	color: white;
+}
+
+header {
+	display: flex;
+	margin: 16px 0;
+}
+
+h1 {
+	color: $primary-green;
+	font-size: 24px;
+}

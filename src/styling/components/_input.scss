@@ -1,0 +1,24 @@
+.labels {
+	color: $primary-green;
+	font-weight: 600;
+}
+
+.inputs {
+	padding: 6px;
+	width: 64px;
+	border: 2px solid white;
+	background-color: $primary-red;
+	color: white;
+	margin: 4px;
+
+	&_container {
+		display: flex;
+		margin: 16px;
+
+		& span {
+			display: flex;
+			align-items: center;
+			margin: 0 8px;
+		}
+	}
+}

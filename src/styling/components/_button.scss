@@ -1,0 +1,15 @@
+.button {
+	margin: 0 4px;
+	background-color: $primary-red;
+	padding: 8px;
+	color: $primary-green;
+	font-size: 16px;
+	font-weight: 600;
+	border: 2px solid white;
+	border-radius: 4px;
+	box-shadow: 1px 1px 4px black;
+
+	&_container {
+		background-color: $primary-red;
+	}
+}
