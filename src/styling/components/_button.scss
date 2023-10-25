@@ -6,8 +6,8 @@
 	font-size: 16px;
 	font-weight: 600;
 	border: 2px solid white;
-	border-radius: 4px;
-	box-shadow: 1px 1px 4px black;
+	border-radius: $default-border-radius;
+	box-shadow: $default-box-shadow;
 
 	&_container {
 		background-color: $primary-red;

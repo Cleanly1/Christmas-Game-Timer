@@ -5,11 +5,12 @@
 
 body {
   align-items: center;
-  background-color: rgb(222, 46, 46);
+  background-color: rgb(189, 39, 39);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   color: white;
+  height: 100vh;
 }
 
 header {
@@ -53,7 +54,8 @@ h1 {
   padding: 6px;
   width: 64px;
   border: 2px solid white;
-  background-color: rgb(222, 46, 46);
+  border-radius: 4px;
+  background-color: rgb(189, 39, 39);
   color: white;
   margin: 4px;
 }
@@ -69,7 +71,7 @@ h1 {
 
 .button {
   margin: 0 4px;
-  background-color: rgb(222, 46, 46);
+  background-color: rgb(189, 39, 39);
   padding: 8px;
   color: rgb(22, 202, 22);
   font-size: 16px;
@@ -79,7 +81,17 @@ h1 {
   box-shadow: 1px 1px 4px black;
 }
 .button_container {
-  background-color: rgb(222, 46, 46);
+  background-color: rgb(189, 39, 39);
+}
+
+.card {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  border: 1px solid rgb(22, 202, 22);
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px black;
+  padding: 2rem;
 }
 
 /*# sourceMappingURL=index.css.map */
