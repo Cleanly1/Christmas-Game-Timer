@@ -3,9 +3,11 @@
 		"prod": "sass src/styling:public/styling",
 		"dev": "sass --watch src/styling:public/styling"
 	},
-  "devDependencies": {
-    "eslint": "^8.31.0",
-    "prettier": "^2.8.1",
-    "sass": "^1.57.1"
-  }
+	"devDependencies": {
+		"eslint": "^8.31.0",
+		"prettier": "^2.8.1"
+	},
+	"dependencies": {
+		"sass": "^1.69.4"
+	}
 }
