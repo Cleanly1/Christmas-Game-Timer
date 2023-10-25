@@ -1,0 +1,9 @@
+.card {
+	align-items: center;
+	display: flex;
+	flex-flow: column;
+	border: 1px solid $primary-green;
+	border-radius: $default-border-radius;
+	box-shadow: $default-box-shadow;
+	padding: 2rem;
+}

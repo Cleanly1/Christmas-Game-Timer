@@ -7,28 +7,30 @@
 		<link rel="icon" href="./assets/icon.png" type="image/x-icon" />
 		<title>Christmas Game Timer</title>
 	</head>
-	<header>
-		<h1>Christmas Game Timer</h1>
-	</header>
-	<div class="timer_container">
-		<p id="time">--:--</p>
-		<span class="timer_icon">
-			<svg
-				version="1.1"
-				xmlns="http://www.w3.org/2000/svg"
-				xmlns:xlink="http://www.w3.org/1999/xlink"
-				viewBox="0 0 480 480"
-				xml:space="preserve"
-			>
-				<g>
-					<path
-						d="M240.907,310.841c20.924,0,37.947-17.005,37.947-37.907c0-17.77-12.308-32.715-28.854-36.795v-59.973
+	<body>
+		<section class="card">
+			<header>
+				<h1>Christmas Game Timer</h1>
+			</header>
+			<div class="timer_container">
+				<p id="time">--:--</p>
+				<span class="timer_icon">
+					<svg
+						version="1.1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						viewBox="0 0 480 480"
+						xml:space="preserve"
+					>
+						<g>
+							<path
+								d="M240.907,310.841c20.924,0,37.947-17.005,37.947-37.907c0-17.77-12.308-32.715-28.854-36.795v-59.973
 				c0-5.523-4.477-10-10-10s-10,4.477-10,10v60.473c-15.594,4.697-26.988,19.187-26.988,36.295
 				C203.012,293.836,220.012,310.841,240.907,310.841z M240.907,255.031c9.896,0,17.947,8.031,17.947,17.903
 				c0,9.874-8.051,17.907-17.947,17.907c-9.868,0-17.895-8.033-17.895-17.907C223.012,263.062,231.04,255.031,240.907,255.031z"
-					/>
-					<path
-						d="M465.796,121.169l-78.613-78.594c-3.905-3.904-10.237-3.904-14.142,0.001c-3.905,3.906-3.904,10.237,0.001,14.142
+							/>
+							<path
+								d="M465.796,121.169l-78.613-78.594c-3.905-3.904-10.237-3.904-14.142,0.001c-3.905,3.906-3.904,10.237,0.001,14.142
 				l29.672,29.665l-30.011,30.006C338.294,86.505,295.554,69.044,250,66.27v-0.952h48.181c16.508,0,34.901-12.967,34.901-31.575
 				v-3.979C333.082,11.133,315.337,0,298.181,0H181.826c-17.129,0-27.355,11.127-27.355,29.764v3.979
 				c0,19.181,10.738,31.575,27.355,31.575H230V66c-47.536,1.617-91.056,19.327-125.27,47.851L77.276,86.392l29.681-29.674
@@ -46,27 +48,28 @@
 				v24.692c-86.244,3.746-155.256,75.074-155.256,162.228c0,89.543,72.846,162.391,162.387,162.391
 				c89.557,0,162.416-72.848,162.416-162.391c0-85.214-65.983-155.304-149.547-161.885V86.314
 				C347.178,92.949,424.216,174.108,424.216,272.933z"
-					/>
-				</g>
-			</svg>
-		</span>
-	</div>
-	<div class="inputs_container">
-		<span>
-			<label class="labels" for="minMinutes">Min minutes:</label>
-			<input class="inputs" id="minMinutes" type="number" />
-		</span>
-		<span>
-			<label class="labels" for="maxMinutes">Max minutes:</label>
-			<input class="inputs" id="maxMinutes" type="number" />
-		</span>
-	</div>
-	<div class="button_container">
-		<button class="button" id="startButton">Start</button>
-		<button class="button" id="stopButton">Stop</button>
-		<button class="button" id="showButton">Show Time Left</button>
-	</div>
-	<body>
+							/>
+						</g>
+					</svg>
+				</span>
+			</div>
+			<div class="inputs_container">
+				<span>
+					<label class="labels" for="minMinutes">Min minutes:</label>
+					<input class="inputs" id="minMinutes" type="number" />
+				</span>
+				<span>
+					<label class="labels" for="maxMinutes">Max minutes:</label>
+					<input class="inputs" id="maxMinutes" type="number" />
+				</span>
+			</div>
+			<div class="button_container">
+				<button class="button" id="startButton">Start</button>
+				<button class="button" id="stopButton">Stop</button>
+				<button class="button" id="showButton">Show Time Left</button>
+			</div>
+		</section>
+
 		<script type="text/javascript" src="script.js"></script>
 	</body>
 </html>
