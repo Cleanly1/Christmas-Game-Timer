@@ -4,3 +4,6 @@
 
 # Ignore Mac specific files
 .DS_Store
+
+# Ignore built styling
+/public/styling/*
