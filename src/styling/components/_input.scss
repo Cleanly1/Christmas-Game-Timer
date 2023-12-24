@@ -14,7 +14,13 @@
 
 	&_container {
 		display: flex;
-		margin: 16px;
+		margin: 16px 8px;
+		flex-flow: column nowrap;
+
+		@media screen and (min-width: 600px) {
+			flex-flow: row;
+			margin: 16px;
+		}
 
 		& span {
 			display: flex;
