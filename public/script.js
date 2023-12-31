@@ -13,10 +13,20 @@ const stopButton = document.querySelector("#stopButton");
 const maxInput = document.querySelector("#maxMinutes");
 maxInput.addEventListener("change", (event) => {
 	maxInput.setAttribute("value", event.target.value);
+	const minValue = minInput.getAttribute("value");
+	if (parseFloat(event.target.value) < parseFloat(minValue)) {
+		minInput.setAttribute("value", event.target.value);
+		minInput.value = event.target.value;
+	}
 });
 const minInput = document.querySelector("#minMinutes");
 minInput.addEventListener("change", (event) => {
 	minInput.setAttribute("value", event.target.value);
+	const maxValue = maxInput.getAttribute("value");
+	if (parseFloat(event.target.value) > parseFloat(maxValue)) {
+		maxInput.setAttribute("value", event.target.value);
+		maxInput.value = event.target.value;
+	}
 });
 const svg = document.querySelector(".timer_icon");
 
@@ -36,11 +46,12 @@ const stopTime = () => {
 	audio.pause();
 
 	timeDisplay.innerHTML = "--:--";
+	startButton.innerHTML = "Start";
 	timeLeft = 0;
 	started = false;
 };
 
-const startTimer = () => {
+const startTimer = (pauseTimeLeft) => {
 	if (started) {
 		return;
 	}
@@ -48,12 +59,15 @@ const startTimer = () => {
 	const maxValue = maxInput.getAttribute("value");
 	const minValue = minInput.getAttribute("value");
 
-	const timeOut = Math.floor(
-		Math.random() *
-			(getMillisecondsForMinutes(maxValue) -
-				getMillisecondsForMinutes(minValue)) +
-			getMillisecondsForMinutes(minValue)
-	);
+	const timeOut =
+		pauseTimeLeft != 0
+			? pauseTimeLeft
+			: Math.floor(
+					Math.random() *
+						(getMillisecondsForMinutes(maxValue) -
+							getMillisecondsForMinutes(minValue)) +
+						getMillisecondsForMinutes(minValue)
+			  );
 
 	timeLeft = timeOut;
 
@@ -88,10 +102,30 @@ showButton.addEventListener("click", () => {
 
 	setTimeout(() => {
 		clearInterval(showInterval);
-		timeDisplay.innerHTML = "--:--";
+		timeDisplay.innerHTML = !started && timeLeft != 0 ? "Paused" : "--:--";
 	}, 3000);
 });
 
-startButton.addEventListener("click", startTimer);
+const pauseTimer = () => {
+	clearInterval(interval);
+	clearTimeout(timer);
+	svg.classList.remove("timer_icon--active");
+	audio.pause();
+
+	timeDisplay.innerHTML = "Paused";
+	started = false;
+};
+
+const onStartPauseClick = () => {
+	if (started) {
+		pauseTimer();
+		startButton.innerHTML = "Start";
+	} else {
+		startTimer(timeLeft ?? undefined);
+		startButton.innerHTML = "Pause";
+	}
+};
+
+startButton.addEventListener("click", onStartPauseClick);
 
 stopButton.addEventListener("click", stopTime);
