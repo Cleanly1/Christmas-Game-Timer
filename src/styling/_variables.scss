@@ -1,8 +1,13 @@
 $primary-red: rgb(189, 39, 39);
-$primary-green: rgb(22, 202, 22);
+$primary-green: rgb(23, 249, 23);
 
 // Border
 $default-border-radius: 4px;
 
 // Box shadow
 $default-box-shadow: 1px 1px 4px black;
+
+// Text shadow
+$default-text-shadow: 1px 0px rgb(0, 63, 0), -1px 0px rgb(0, 63, 0),
+	0px 1px rgb(0, 63, 0), 0px -1px rgb(0, 63, 0), 1px 1px rgb(0, 63, 0),
+	-1px -1px rgb(0, 63, 0), 1px -1px rgb(0, 63, 0), -1px 1px rgb(0, 63, 0);

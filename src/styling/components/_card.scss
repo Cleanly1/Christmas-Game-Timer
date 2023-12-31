@@ -6,4 +6,8 @@
 	border-radius: $default-border-radius;
 	box-shadow: $default-box-shadow;
 	padding: 2rem;
+
+	&_header_title {
+		text-shadow: $default-text-shadow;
+	}
 }
